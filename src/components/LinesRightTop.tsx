@@ -13,7 +13,8 @@ export default function LinesRightTop({ className, style }: React.SVGProps<SVGSV
     >
       <defs>
         <clipPath id="clip-lines-right-top">
-          <rect className="clip-lines-right-top" x="0" y="-10" width="0" height="200" />
+          <rect className="clip-rrt-h" x="0" y="55" width="0" height="30" />
+          <rect className="clip-rrt-v" x="175" y="64" width="20" height="0" />
         </clipPath>
       </defs>
       <path

@@ -13,7 +13,8 @@ export default function LinesLeft({ className, style }: React.SVGProps<SVGSVGEle
     >
       <defs>
         <clipPath id="clip-lines-left">
-          <rect className="clip-lines-left" x="0" y="-10" width="0" height="200" />
+          <rect className="clip-ll-h" x="0" y="60" width="0" height="30" />
+          <rect className="clip-ll-v" x="214" y="68" width="20" height="0" />
         </clipPath>
       </defs>
       <path

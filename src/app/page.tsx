@@ -41,37 +41,23 @@ export default function Home() {
       },
     });
 
-    const drawLine = (clipClass: string, maxWidth: number, position?: string) =>
-      tl.to(
-        `.${clipClass}`,
-        { attr: { width: maxWidth }, duration: 1, ease: "power2.inOut" },
-        position,
-      );
+    const drawH = (cls: string, w: number, pos?: string) =>
+      tl.to(`.${cls}`, { attr: { width: w }, duration: 0.8, ease: "power2.inOut" }, pos);
+    const drawV = (cls: string, totalH: number) =>
+      tl.to(`.${cls}`, { attr: { y: 0, height: totalH }, duration: 0.25, ease: "power2.inOut" });
 
-    tl.from(".pop-1", {
-      scale: 0.9,
-      opacity: 0,
-      duration: 0.32,
-      ease: "power2.out",
-    });
-    drawLine("clip-lines-left", 232, "-=0.6");
-    tl.from(
-      ".pop-2",
-      { x: 32, opacity: 0, duration: 0.32, ease: "power2.out" },
-      "-=0.32",
-    );
-    drawLine("clip-lines-right-top", 192, "-=0.6");
-    tl.from(
-      ".pop-3",
-      { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" },
-      "-=0.32",
-    );
-    drawLine("clip-lines-right-bottom", 181, "-=0.6");
-    tl.from(
-      ".pop-4",
-      { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" },
-      "-=0.32",
-    );
+    tl.from(".pop-1", { scale: 0.9, opacity: 0, duration: 0.32, ease: "power2.out" });
+
+    drawH("clip-ll-h", 232, "-=0.6");
+    drawV("clip-ll-v", 68);
+    tl.from(".pop-2", { x: 32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
+
+    drawH("clip-rrt-h", 192, "-=0.6");
+    drawV("clip-rrt-v", 64);
+    tl.from(".pop-3", { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
+
+    tl.to(".clip-lines-right-bottom", { attr: { width: 181 }, duration: 0.8, ease: "power2.inOut" }, "-=0.6");
+    tl.from(".pop-4", { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
   });
   return <Hero />;
 }
