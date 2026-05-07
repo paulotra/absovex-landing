@@ -1,58 +1,70 @@
-"use client";
-
-import { useRef } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-
-gsap.registerPlugin(useGSAP);
+import Image from "next/image";
+import Button from "@/components/Button";
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-      tl.from(".hero-eyebrow", { y: 16, opacity: 0, duration: 0.5 })
-        .from(".hero-heading", { y: 24, opacity: 0, duration: 0.7 }, "-=0.2")
-        .from(".hero-subheading", { y: 16, opacity: 0, duration: 0.6 }, "-=0.4")
-        .from(".hero-cta", { y: 12, opacity: 0, duration: 0.5, stagger: 0.1 }, "-=0.3");
-    },
-    { scope: containerRef }
-  );
-
   return (
-    <section
-      ref={containerRef}
-      className="flex min-h-screen flex-col items-center justify-center px-6 text-center"
-    >
-      <p className="hero-eyebrow mb-4 text-xs font-medium uppercase tracking-widest text-zinc-400">
-        Welcome
-      </p>
+    <section className="relative flex min-h-screen flex-col items-center justify-start pt-14 overflow-hidden px-6 text-center bg-[#fffaf3] rounded-xl">
+      {/* Grid lines */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 max-w-[1460px] mx-auto z-0 bg-no-repeat"
+        style={{
+          backgroundImage: "url('/lines.png')",
+          backgroundSize: "contain",
+          backgroundPosition: "top center",
+        }}
+      />
 
-      <h1 className="hero-heading max-w-3xl text-5xl font-bold tracking-tight text-black dark:text-white sm:text-6xl lg:text-7xl">
-        Build something{" "}
-        <span className="text-zinc-400">remarkable</span>
+      {/* Noise */}
+      <div aria-hidden="true" className="bg-noise absolute inset-0 z-10" />
+
+      {/* Bottom inner shadow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 shadow-[inset_0px_-20px_64px_-30px_rgba(199,195,181,0.6)]"
+      />
+
+      {/* Eyebrow badge */}
+      <div className="relative z-10 mb-3 flex items-center gap-2 rounded-full bg-[#fee3e9] py-1 pl-1 pr-4">
+        <span className="rounded-full bg-white px-3 py-1 text-xs font-medium text-[#f2188f]">
+          Try Now
+        </span>
+        <span className="text-xs font-medium text-[#f2188f]">
+          Optimize every dose
+        </span>
+      </div>
+
+      <h1 className="relative z-10 max-w-[1000px] text-4xl font-bold leading-tight tracking-tight text-[#0d3127] sm:text-5xl">
+        Not sure how to take your <br />
+        <span className="font-extrabold text-[#0f8a8d]">meds</span> and{" "}
+        <span className="font-extrabold text-[#0f8a8d]">supplements</span>{" "}
+        together?
       </h1>
 
-      <p className="hero-subheading mt-6 max-w-xl text-lg text-zinc-500 dark:text-zinc-400">
-        A modern foundation with Next.js, TypeScript, Tailwind CSS, and GSAP —
-        ready to ship.
+      <p className="relative z-10 mt-7 max-w-[600px] text-lg font-medium leading-8 text-[#4e655f]">
+        Absovex reviews your routine for food, coffee, mineral, and timing
+        conflicts, then gives you a clear report with what to move, what to
+        separate, and what to ask your doctor or pharmacist.
       </p>
 
-      <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
-        <a
-          href="#"
-          className="hero-cta inline-flex h-11 items-center justify-center rounded-full bg-black px-8 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
-        >
-          Get started
-        </a>
-        <a
-          href="#"
-          className="hero-cta inline-flex h-11 items-center justify-center rounded-full border border-black/10 px-8 text-sm font-medium text-black transition-colors hover:bg-black/5 dark:border-white/10 dark:text-white dark:hover:bg-white/5"
-        >
-          Learn more
-        </a>
+      <div className="relative z-10 mt-10 flex flex-col items-center gap-6 sm:flex-row">
+        <Button href="#" showArrow>
+          Get My $29 Report
+        </Button>
+        <Button href="#" variant="secondary">
+          See Sample Report
+        </Button>
+      </div>
+
+      <div className="relative z-10  mt-8 mb-[-240px]">
+        <Image
+          src="/phone.png"
+          alt="phone"
+          width={419}
+          height={867}
+          className="max-w-[380px]"
+          priority
+        />
       </div>
     </section>
   );
