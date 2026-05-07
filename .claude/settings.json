@@ -10,7 +10,8 @@
       "Read(//tmp/**)",
       "Bash(cat /tmp/arrow-right-check)",
       "Read(//private/tmp/**)",
-      "Bash(cp /tmp/arrow-right-check /Users/paulo/Sites/absovex/public/arrow-pink.svg)"
+      "Bash(cp /tmp/arrow-right-check /Users/paulo/Sites/absovex/public/arrow-pink.svg)",
+      "Bash(node -e \"import\\('shaders/react'\\).then\\(m => console.log\\(Object.keys\\(m\\)\\)\\).catch\\(e => console.log\\('Error:', e.message\\)\\)\")"
     ],
     "additionalDirectories": [
       "/private/tmp"

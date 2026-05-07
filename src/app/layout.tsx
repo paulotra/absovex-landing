@@ -24,11 +24,11 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col pb-20">
+      <body className="flex flex-col">
+        <Navigation />
         <SmoothScroll />
         <div id="smooth-wrapper">
-          <div id="smooth-content">
-            <Navigation />
+          <div id="smooth-content" className="min-h-[1400px]">
             <main className="flex flex-col flex-1 px-10 top-[88px] relative pb-20">
               {children}
             </main>
