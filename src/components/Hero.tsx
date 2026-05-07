@@ -105,6 +105,29 @@ export default function Hero() {
             No account needed for this first version.
           </p>
         </div>
+
+        {/* Score comparison card */}
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-[260px] flex items-center gap-8 rounded-[16px] border border-[#e3e3e9] bg-white px-20 py-5">
+          {/* Before score */}
+          <div className="flex flex-col items-center">
+            <span className="text-[58px] font-extrabold leading-none text-[#9da3af]">47</span>
+            <span className="mt-1 text-[13px] font-extrabold tracking-[1.6px] text-black">CURRENT</span>
+          </div>
+
+          {/* Arrow + pts badge */}
+          <div className="flex flex-col items-center gap-3">
+            <Image src="/arrow-pink.svg" alt="" width={39} height={16} aria-hidden="true" />
+            <div className="flex items-center justify-center gap-0.5 rounded-full border border-[#9bd6d6] bg-[#e8f7f7] px-3 py-1">
+              <span className="text-[13px] font-extrabold text-[#0f7e7b]">+32pts</span>
+            </div>
+          </div>
+
+          {/* After score */}
+          <div className="flex flex-col items-center">
+            <span className="text-[58px] font-extrabold leading-none text-[#0f7e7b]">79</span>
+            <span className="mt-1 text-[13px] font-extrabold tracking-[1.6px] text-[#0f7e7b]">OPTIMIZED</span>
+          </div>
+        </div>
       </div>
     </section>
   );

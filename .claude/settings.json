@@ -5,7 +5,15 @@
       "Bash(curl -L \"https://www.figma.com/api/mcp/asset/1f6720fd-6f32-464c-b675-f1bc363511cb\" -o /Users/paulo/Sites/absovex/public/logo.png)",
       "Bash(curl -L \"https://www.figma.com/api/mcp/asset/67a79478-4246-42de-bc84-2f8e186921fc\" -o /Users/paulo/Sites/absovex/public/arrow.png)",
       "Bash(curl -L \"https://www.figma.com/api/mcp/asset/1f6720fd-6f32-464c-b675-f1bc363511cb\" -o /Users/paulo/Sites/absovex/public/logo.png --cache-control no-cache -H \"Cache-Control: no-cache\")",
-      "Bash(curl -L \"https://www.figma.com/api/mcp/asset/375591ca-8a5f-4da5-9594-708f13b102e9\" -o /Users/paulo/Sites/absovex/public/logo.png)"
+      "Bash(curl -L \"https://www.figma.com/api/mcp/asset/375591ca-8a5f-4da5-9594-708f13b102e9\" -o /Users/paulo/Sites/absovex/public/logo.png)",
+      "Bash(curl -L \"https://www.figma.com/api/mcp/asset/c1e7ab44-fa5a-49c3-b178-377cbd5bd8a3\" -o /tmp/arrow-right-check)",
+      "Read(//tmp/**)",
+      "Bash(cat /tmp/arrow-right-check)",
+      "Read(//private/tmp/**)",
+      "Bash(cp /tmp/arrow-right-check /Users/paulo/Sites/absovex/public/arrow-pink.svg)"
+    ],
+    "additionalDirectories": [
+      "/private/tmp"
     ]
   }
 }

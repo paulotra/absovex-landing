@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Navigation from "@/components/Navigation";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -23,11 +24,16 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Navigation />
-        <main className="flex flex-col flex-1 px-10 top-[88px] relative pb-20">
-          {children}
-        </main>
+      <body className="min-h-full flex flex-col pb-20">
+        <SmoothScroll />
+        <div id="smooth-wrapper">
+          <div id="smooth-content">
+            <Navigation />
+            <main className="flex flex-col flex-1 px-10 top-[88px] relative pb-20">
+              {children}
+            </main>
+          </div>
+        </div>
       </body>
     </html>
   );
