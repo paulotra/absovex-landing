@@ -9,12 +9,14 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Home() {
   useGSAP(() => {
-    gsap.utils.toArray<HTMLElement>(".scrub").forEach((el) => {
-      gsap.from(el, {
-        y: 20,
-        opacity: 0,
-        duration: 0.6,
-      });
+    gsap.to("body", { opacity: 1, duration: 0.4, ease: "power2.out" });
+
+    gsap.from(".scrub", {
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.12,
     });
 
     gsap.from(".phone", {

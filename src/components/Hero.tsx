@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 
 export default function Hero() {
   return (
-    <section className="hero relative flex min-h-screen flex-col items-center justify-start pt-14 overflow-hidden px-6 text-center bg-[#fffaf3] rounded-xl">
+    <section className="hero relative flex min-h-screen flex-col items-center justify-start pt-14 overflow-hidden px-6 text-center bg-[#fffaf3] rounded-2xl">
       {/* Grid lines */}
       <div
         aria-hidden="true"
