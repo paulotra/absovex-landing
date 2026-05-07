@@ -1,4 +1,7 @@
 import ShaderEffect from "@/components/ShaderEffect";
+import LinesLeft from "@/components/LinesLeft";
+import LinesRightTop from "@/components/LinesRightTop";
+import LinesRightBottom from "@/components/LinesRightBottom";
 import Image from "next/image";
 import Button from "@/components/Button";
 
@@ -69,6 +72,12 @@ export default function Hero() {
           priority
         />
 
+        {/* Left card — connector line (curved, flipped to point right→phone) */}
+        <LinesLeft
+          className="absolute -scale-y-100 rotate-180 pointer-events-none pop-2-line"
+          style={{ left: "calc(50% - 190px - 204px)", top: "110px" }}
+        />
+
         {/* Left card — timer */}
         <div className="pop-2 absolute -left-20 top-20 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
           <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
@@ -83,6 +92,12 @@ export default function Hero() {
           </p>
         </div>
 
+        {/* Top-right card — connector line */}
+        <LinesRightTop
+          className="absolute pointer-events-none pop-3-line"
+          style={{ left: "calc(50% + 190px + 21px)", top: "76px" }}
+        />
+
         {/* Top-right card — private */}
         <div className="pop-3 absolute -right-4 top-0 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
           <img
@@ -95,8 +110,14 @@ export default function Hero() {
           </p>
         </div>
 
+        {/* Bottom-right card — connector line */}
+        <LinesRightBottom
+          className="absolute pointer-events-none pop-4-line"
+          style={{ left: "calc(50% + 190px - 15px)", top: "217px" }}
+        />
+
         {/* Bottom-right card — no account */}
-        <div className="pop-4 absolute -right-24 top-40 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+        <div className="pop-4 absolute -right-24 top-43 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
           <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
             <img
               src="https://www.figma.com/api/mcp/asset/c67d8f2b-6a8f-4e9d-b852-70a399d090a2"

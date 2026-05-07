@@ -11,7 +11,10 @@
       "Bash(cat /tmp/arrow-right-check)",
       "Read(//private/tmp/**)",
       "Bash(cp /tmp/arrow-right-check /Users/paulo/Sites/absovex/public/arrow-pink.svg)",
-      "Bash(node -e \"import\\('shaders/react'\\).then\\(m => console.log\\(Object.keys\\(m\\)\\)\\).catch\\(e => console.log\\('Error:', e.message\\)\\)\")"
+      "Bash(node -e \"import\\('shaders/react'\\).then\\(m => console.log\\(Object.keys\\(m\\)\\)\\).catch\\(e => console.log\\('Error:', e.message\\)\\)\")",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/01bc8628-573f-4d83-9696-bfe9bf6c0116\" -o /tmp/lines-left)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/d1664600-cdc2-476a-b8b1-b762dfdf6eaa\" -o /tmp/lines-right-top)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/84eb075d-b9de-4ac8-9baf-4847e875554b\" -o /tmp/lines-right-bottom)"
     ],
     "additionalDirectories": [
       "/private/tmp"
