@@ -56,15 +56,55 @@ export default function Hero() {
         </Button>
       </div>
 
-      <div className="relative z-10  mt-8 mb-[-240px]">
+      <div className="relative z-10 mt-12 mb-[-240px] w-full max-w-5xl mx-auto">
         <Image
           src="/phone.png"
           alt="phone"
           width={419}
           height={867}
-          className="max-w-[380px]"
+          className="max-w-[380px] mx-auto block"
           priority
         />
+
+        {/* Left card — timer */}
+        <div className="absolute -left-20 top-20 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+          <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
+            <img
+              src="https://www.figma.com/api/mcp/asset/0d3ffcb1-4350-4ceb-9367-d4bd93bbef97"
+              alt=""
+              className="size-6"
+            />
+          </div>
+          <p className="w-[219px] text-base leading-6 text-left text-[#0f8a8d]">
+            Usually takes a few minutes, depending on your routine.
+          </p>
+        </div>
+
+        {/* Top-right card — private */}
+        <div className="absolute -right-4 top-0 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+          <img
+            src="https://www.figma.com/api/mcp/asset/7e60fcc9-290c-471a-8382-398cad35224f"
+            alt=""
+            className="shrink-0 size-[48px]"
+          />
+          <p className="whitespace-nowrap text-base leading-6 text-left text-[#0f8a8d]">
+            Private by design.
+          </p>
+        </div>
+
+        {/* Bottom-right card — no account */}
+        <div className="absolute -right-24 top-40 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+          <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
+            <img
+              src="https://www.figma.com/api/mcp/asset/c67d8f2b-6a8f-4e9d-b852-70a399d090a2"
+              alt=""
+              className="size-[30px]"
+            />
+          </div>
+          <p className="w-[170px] text-base leading-6 text-left text-[#0f8a8d]">
+            No account needed for this first version.
+          </p>
+        </div>
       </div>
     </section>
   );
