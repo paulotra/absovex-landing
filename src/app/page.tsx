@@ -50,14 +50,17 @@ export default function Home() {
 
     tl.from(".pop-1", { scale: 0.9, opacity: 0, duration: 0.32, ease: "power2.out" });
 
+    tl.set(".pop-2-line", { opacity: 1 });
     drawH("clip-ll-h", 232, "-=0.6");
     drawV("clip-ll-v", 68);
     tl.from(".pop-2", { x: 32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
 
+    tl.set(".pop-3-line", { opacity: 1 });
     drawH("clip-rrt-h", 192, "-=0.6");
     drawV("clip-rrt-v", 64);
     tl.from(".pop-3", { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
 
+    tl.set(".pop-4-line", { opacity: 1 });
     tl.to(".clip-lines-right-bottom", { attr: { width: 181 }, duration: 0.8, ease: "power2.inOut" }, "-=0.6");
     tl.from(".pop-4", { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
   });

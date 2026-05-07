@@ -18,6 +18,12 @@ body {
   opacity: 0;
 }
 
+.pop-2-line,
+.pop-3-line,
+.pop-4-line {
+  opacity: 0;
+}
+
 main,
 nav {
   min-width: 1280px;
