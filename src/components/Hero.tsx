@@ -64,11 +64,11 @@ export default function Hero() {
 
       <div className="phone-wrapper relative z-10 mt-12 mb-[-240px] w-full max-w-5xl mx-auto">
         <Image
-          src="/phone.png"
-          alt="phone"
-          width={419}
-          height={867}
-          className="max-w-[380px] mx-auto block phone"
+          src="/paper.webp"
+          alt="paper"
+          width={1153}
+          height={1480}
+          className="max-w-[1400px] mx-auto block phone relative z-20 -mb-[700px] -top-40 left-28"
           priority
         />
 
@@ -128,45 +128,6 @@ export default function Hero() {
           <p className="w-[170px] text-base leading-6 text-left text-[#0f8a8d]">
             No account needed for this first version.
           </p>
-        </div>
-
-        {/* Score comparison card */}
-        <div className="pop-1 absolute left-1/2 -translate-x-1/2 top-30 flex items-center gap-8 rounded-[16px] border border-[#e3e3e9] bg-white px-20 py-5">
-          {/* Before score */}
-          <div className="flex flex-col items-center">
-            <span className="text-[58px] font-extrabold leading-none text-[#9da3af]">
-              47
-            </span>
-            <span className="mt-1 text-[13px] font-extrabold tracking-[1.6px] text-black">
-              CURRENT
-            </span>
-          </div>
-
-          {/* Arrow + pts badge */}
-          <div className="flex flex-col items-center gap-3">
-            <Image
-              src="/arrow-pink.svg"
-              alt=""
-              width={39}
-              height={16}
-              aria-hidden="true"
-            />
-            <div className="flex items-center justify-center gap-0.5 rounded-full border border-[#9bd6d6] bg-[#e8f7f7] px-3 py-1">
-              <span className="text-[13px] font-extrabold text-[#0f7e7b]">
-                +32pts
-              </span>
-            </div>
-          </div>
-
-          {/* After score */}
-          <div className="flex flex-col items-center">
-            <span className="text-[58px] font-extrabold leading-none text-[#0f7e7b]">
-              79
-            </span>
-            <span className="mt-1 text-[13px] font-extrabold tracking-[1.6px] text-[#0f7e7b]">
-              OPTIMIZED
-            </span>
-          </div>
         </div>
       </div>
     </section>
