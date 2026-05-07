@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-start pt-14 overflow-hidden px-6 text-center bg-[#fffaf3] rounded-xl">
+    <section className="hero relative flex min-h-screen flex-col items-center justify-start pt-14 overflow-hidden px-6 text-center bg-[#fffaf3] rounded-xl">
       {/* Grid lines */}
       <div
         aria-hidden="true"
@@ -28,7 +28,7 @@ export default function Hero() {
       />
 
       {/* Eyebrow badge */}
-      <div className="relative z-10 mb-3 flex items-center gap-2 rounded-full bg-[#fee3e9] py-1 pl-1 pr-4">
+      <div className="scrub relative z-10 mb-3 flex items-center gap-2 rounded-full bg-[#fee3e9] py-1 pl-1 pr-4">
         <span className="rounded-full bg-white px-3 py-1 text-xs font-medium text-[#f2188f]">
           Try Now
         </span>
@@ -37,20 +37,20 @@ export default function Hero() {
         </span>
       </div>
 
-      <h1 className="relative z-10 max-w-[1000px] text-4xl font-bold leading-tight tracking-tight text-[#0d3127] sm:text-5xl">
+      <h1 className="scrub relative z-10 max-w-[1000px] text-4xl font-bold leading-tight tracking-tight text-[#0d3127] sm:text-5xl">
         Not sure how to take your <br />
         <span className="font-extrabold text-[#0f8a8d]">meds</span> and{" "}
         <span className="font-extrabold text-[#0f8a8d]">supplements</span>{" "}
         together?
       </h1>
 
-      <p className="relative z-10 mt-7 max-w-[600px] text-lg font-medium leading-8 text-[#4e655f]">
+      <p className="scrub relative z-10 mt-7 max-w-[600px] text-lg font-medium leading-8 text-[#4e655f]">
         Absovex reviews your routine for food, coffee, mineral, and timing
         conflicts, then gives you a clear report with what to move, what to
         separate, and what to ask your doctor or pharmacist.
       </p>
 
-      <div className="relative z-10 mt-10 flex flex-col items-center gap-6 sm:flex-row">
+      <div className="scrub relative z-10 mt-10 flex flex-col items-center gap-6 sm:flex-row">
         <Button href="#" showArrow>
           Get My $29 Report
         </Button>
@@ -59,18 +59,18 @@ export default function Hero() {
         </Button>
       </div>
 
-      <div className="relative z-10 mt-12 mb-[-240px] w-full max-w-5xl mx-auto">
+      <div className="phone-wrapper relative z-10 mt-12 mb-[-240px] w-full max-w-5xl mx-auto">
         <Image
           src="/phone.png"
           alt="phone"
           width={419}
           height={867}
-          className="max-w-[380px] mx-auto block"
+          className="max-w-[380px] mx-auto block phone"
           priority
         />
 
         {/* Left card — timer */}
-        <div className="absolute -left-20 top-20 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+        <div className="pop-2 absolute -left-20 top-20 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
           <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
             <img
               src="https://www.figma.com/api/mcp/asset/0d3ffcb1-4350-4ceb-9367-d4bd93bbef97"
@@ -84,7 +84,7 @@ export default function Hero() {
         </div>
 
         {/* Top-right card — private */}
-        <div className="absolute -right-4 top-0 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+        <div className="pop-3 absolute -right-4 top-0 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
           <img
             src="https://www.figma.com/api/mcp/asset/7e60fcc9-290c-471a-8382-398cad35224f"
             alt=""
@@ -96,7 +96,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom-right card — no account */}
-        <div className="absolute -right-24 top-40 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+        <div className="pop-4 absolute -right-24 top-40 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
           <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
             <img
               src="https://www.figma.com/api/mcp/asset/c67d8f2b-6a8f-4e9d-b852-70a399d090a2"
@@ -110,7 +110,7 @@ export default function Hero() {
         </div>
 
         {/* Score comparison card */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-30 flex items-center gap-8 rounded-[16px] border border-[#e3e3e9] bg-white px-20 py-5">
+        <div className="pop-1 absolute left-1/2 -translate-x-1/2 top-30 flex items-center gap-8 rounded-[16px] border border-[#e3e3e9] bg-white px-20 py-5">
           {/* Before score */}
           <div className="flex flex-col items-center">
             <span className="text-[58px] font-extrabold leading-none text-[#9da3af]">

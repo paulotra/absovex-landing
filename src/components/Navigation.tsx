@@ -37,16 +37,18 @@ export default function Navigation() {
       ref={navRef}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 bg-[#FFFFFF60] backdrop-blur-md border-b border-white/20 min-h-[88px]"
     >
-      <Link href="/" className="shrink-0">
-        <Image
-          src="/logo.png"
-          alt="Absovex"
-          width={138}
-          height={32}
-          priority
-          unoptimized
-        />
-      </Link>
+      <div className="w-[222px]">
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/logo.png"
+            alt="Absovex"
+            width={138}
+            height={32}
+            priority
+            unoptimized
+          />
+        </Link>
+      </div>
 
       <ul className="flex items-center gap-[60px]">
         {links.map(({ href, label }) => (
