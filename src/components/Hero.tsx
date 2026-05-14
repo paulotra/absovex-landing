@@ -4,6 +4,7 @@ import LinesRightTop from "@/components/LinesRightTop";
 import LinesRightBottom from "@/components/LinesRightBottom";
 import Image from "next/image";
 import Button from "@/components/Button";
+import EyebrowBadge from "@/components/EyebrowBadge";
 
 export default function Hero() {
   return (
@@ -31,16 +32,13 @@ export default function Hero() {
       />
 
       {/* Eyebrow badge */}
-      <div className="scrub relative z-10 mb-3 flex items-center gap-2 rounded-full bg-[#fee3e9] py-1 pl-1 pr-4">
-        <span className="rounded-full bg-white px-3 py-1 text-xs font-medium text-[#f2188f]">
-          Try Now
-        </span>
-        <span className="text-xs font-medium text-[#f2188f]">
-          Optimize every dose
-        </span>
-      </div>
+      <EyebrowBadge
+        className="scrub relative z-10 mb-3"
+        label="Try Now"
+        text="Optimize every dose"
+      />
 
-      <h1 className="scrub relative z-10 max-w-[1000px] text-4xl font-bold leading-tight tracking-tight text-[#0d3127] sm:text-5xl">
+      <h1 className="scrub relative z-10 max-w-[1000px]">
         Not sure how to take your <br className="hidden lg:block" />
         <span className="font-extrabold text-[#0f8a8d]">meds</span> and{" "}
         <span className="font-extrabold text-[#0f8a8d]">supplements</span>{" "}
@@ -91,7 +89,7 @@ export default function Hero() {
             />
 
             {/* Left card — timer */}
-            <div className="pop-2 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -left-20 top-20 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+            <div className="pop-2 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -left-20 top-20 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
               <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
                 <img
                   src="https://www.figma.com/api/mcp/asset/0d3ffcb1-4350-4ceb-9367-d4bd93bbef97"
@@ -111,7 +109,7 @@ export default function Hero() {
             />
 
             {/* Top-right card — private */}
-            <div className="pop-3 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-4 top-0 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+            <div className="pop-3 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-4 top-0 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
               <img
                 src="https://www.figma.com/api/mcp/asset/7e60fcc9-290c-471a-8382-398cad35224f"
                 alt=""
@@ -129,7 +127,7 @@ export default function Hero() {
             />
 
             {/* Bottom-right card — no account */}
-            <div className="pop-4 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-24 top-43 flex items-center gap-4 rounded-[14px] bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+            <div className="pop-4 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-24 top-43 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
               <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
                 <img
                   src="https://www.figma.com/api/mcp/asset/c67d8f2b-6a8f-4e9d-b852-70a399d090a2"

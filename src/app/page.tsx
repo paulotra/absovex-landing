@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ProofStrip from "@/components/ProofStrip";
+import Statistics from "@/components/Statistics";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -99,6 +100,7 @@ export default function Home() {
       <Hero />
       <div className="container">
         <ProofStrip></ProofStrip>
+        <Statistics></Statistics>
       </div>
     </div>
   );
