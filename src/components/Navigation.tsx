@@ -10,10 +10,11 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const links = [
+  { href: "#statistics", label: "Statistics" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#what-you-get", label: "What You Get" },
-  { href: "#ai-advisor", label: "AI Advisor" },
-  { href: "#sample-report", label: "Sample Report" },
+  { href: "#why-29", label: "Why $29" },
+  { href: "#why-trust-us", label: "Why Trust Us" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -35,9 +36,9 @@ export default function Navigation() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-4 bg-[#FFFFFF60] backdrop-blur-md border-b border-white/20 min-h-[88px]"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 lg:px-10 py-4 bg-[#FFFFFF60] backdrop-blur-md border-b border-white/20 min-h-[88px] gap-x-6"
     >
-      <div className="w-[222px]">
+      <div className="xl:flex-1">
         <Link href="/" className="shrink-0">
           <Image
             src="/logo.png"
@@ -46,11 +47,12 @@ export default function Navigation() {
             height={32}
             priority
             unoptimized
+            className="w-[116px] lg:w-[138px]"
           />
         </Link>
       </div>
 
-      <ul className="flex items-center gap-[60px]">
+      <ul className="flex items-center gap-10 xl:gap-16 hidden lg:flex">
         {links.map(({ href, label }) => (
           <li key={href}>
             <Link
@@ -63,9 +65,11 @@ export default function Navigation() {
         ))}
       </ul>
 
-      <Button href="#" showArrow>
-        Get My $29 Report
-      </Button>
+      <div className="md:flex-1 flex justify-end">
+        <Button href="#" showArrow>
+          Get My $29 Report
+        </Button>
+      </div>
     </nav>
   );
 }

@@ -15,7 +15,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const base =
-    "relative inline-flex items-center justify-center gap-[10px] rounded-[14px] px-8 py-3 text-base font-medium transition-opacity hover:opacity-90";
+    "relative inline-flex items-center justify-center gap-4 rounded-[14px] px-8 py-3 text-base font-medium transition-opacity hover:opacity-90";
 
   const variants: Record<ButtonVariant, string> = {
     default: "bg-[#0f8a8d] text-white",
@@ -28,7 +28,7 @@ export default function Button({
   };
 
   return (
-    <div className="relative shrink-0">
+    <div className="relative w-full md:w-auto md:shrink-0">
       <div
         className={`absolute bottom-[-8px] left-[10px] opacity-80 right-[10px] h-[13px] rounded-[50px] blur-[6px] ${shadowColor[variant]}`}
       />
