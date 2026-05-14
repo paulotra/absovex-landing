@@ -10,6 +10,7 @@ import HowItWorks from "@/components/HowItWorks";
 import WhatYouGet from "@/components/WhatYouGet";
 import Why29 from "@/components/Why29";
 import Score from "@/components/Score";
+import WhyTrust from "@/components/WhyTrust";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -107,10 +108,11 @@ export default function Home() {
         <Statistics></Statistics>
         <HowItWorks></HowItWorks>
         <WhatYouGet></WhatYouGet>
-        <div className="lg:flex gap-x-10">
+        <div className="lg:flex gap-x-10 py-20">
           <Why29></Why29>
           <Score></Score>
         </div>
+        <WhyTrust></WhyTrust>
       </div>
     </div>
   );
