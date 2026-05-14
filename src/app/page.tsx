@@ -7,6 +7,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import ProofStrip from "@/components/ProofStrip";
 import Statistics from "@/components/Statistics";
 import HowItWorks from "@/components/HowItWorks";
+import WhatYouGet from "@/components/WhatYouGet";
+import Why29 from "@/components/Why29";
+import Score from "@/components/Score";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -103,6 +106,11 @@ export default function Home() {
         <ProofStrip></ProofStrip>
         <Statistics></Statistics>
         <HowItWorks></HowItWorks>
+        <WhatYouGet></WhatYouGet>
+        <div className="lg:flex gap-x-10">
+          <Why29></Why29>
+          <Score></Score>
+        </div>
       </div>
     </div>
   );

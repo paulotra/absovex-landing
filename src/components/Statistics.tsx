@@ -42,7 +42,7 @@ export default function Statistics() {
         {stats.map((stat) => (
           <div
             key={stat.title}
-            className="flex flex-col justify-between gap-5 rounded-card border border-[rgba(14,100,102,0.16)] px-8 py-10"
+            className="flex flex-col justify-between gap-5 rounded-card border border-stroke px-8 py-10"
           >
             <div className="flex flex-col gap-3">
               <p className="text-xl font-bold leading-tight text-[#0d3127]">
@@ -53,7 +53,7 @@ export default function Statistics() {
               </p>
             </div>
             <div className="flex flex-col gap-5">
-              <div className="border-t border-[rgba(14,100,102,0.16)]" />
+              <div className="border-t border-stroke" />
               <div className="flex items-start gap-2">
                 <img
                   src="/icons/globe.svg"
