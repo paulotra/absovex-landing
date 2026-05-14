@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ProofStrip from "@/components/ProofStrip";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -44,25 +45,61 @@ export default function Home() {
     });
 
     const drawH = (cls: string, w: number, pos?: string) =>
-      tl.to(`.${cls}`, { attr: { width: w }, duration: 0.8, ease: "power2.inOut" }, pos);
+      tl.to(
+        `.${cls}`,
+        { attr: { width: w }, duration: 0.8, ease: "power2.inOut" },
+        pos,
+      );
     const drawV = (cls: string, totalH: number) =>
-      tl.to(`.${cls}`, { attr: { y: 0, height: totalH }, duration: 0.25, ease: "power2.inOut" });
+      tl.to(`.${cls}`, {
+        attr: { y: 0, height: totalH },
+        duration: 0.25,
+        ease: "power2.inOut",
+      });
 
-    tl.from(".pop-1", { scale: 0.9, opacity: 0, duration: 0.32, ease: "power2.out" });
+    tl.from(".pop-1", {
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.32,
+      ease: "power2.out",
+    });
 
     tl.set(".pop-2-line", { opacity: 1 });
     drawH("clip-ll-h", 232, "-=0.6");
     drawV("clip-ll-v", 68);
-    tl.from(".pop-2", { x: 32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
+    tl.from(
+      ".pop-2",
+      { x: 32, opacity: 0, duration: 0.32, ease: "power2.out" },
+      "-=0.1",
+    );
 
     tl.set(".pop-3-line", { opacity: 1 });
     drawH("clip-rrt-h", 192, "-=0.6");
     drawV("clip-rrt-v", 64);
-    tl.from(".pop-3", { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
+    tl.from(
+      ".pop-3",
+      { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" },
+      "-=0.1",
+    );
 
     tl.set(".pop-4-line", { opacity: 1 });
-    tl.to(".clip-lines-right-bottom", { attr: { width: 181 }, duration: 0.8, ease: "power2.inOut" }, "-=0.6");
-    tl.from(".pop-4", { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" }, "-=0.1");
+    tl.to(
+      ".clip-lines-right-bottom",
+      { attr: { width: 181 }, duration: 0.8, ease: "power2.inOut" },
+      "-=0.6",
+    );
+    tl.from(
+      ".pop-4",
+      { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" },
+      "-=0.1",
+    );
   });
-  return <Hero />;
+  return (
+    <div>
+      <Hero />
+      <div className="container">
+        <ProofStrip></ProofStrip>
+      </div>
+    </div>
+  );
 }

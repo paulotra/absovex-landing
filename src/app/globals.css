@@ -40,6 +40,11 @@ body {
   opacity: 0;
 }
 
+.container {
+  @apply mx-auto px-0;
+  max-width: 1424px;
+}
+
 #smooth-wrapper {
   position: fixed;
   top: 0;
