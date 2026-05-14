@@ -1,0 +1,129 @@
+import Image from "next/image";
+import EyebrowBadge from "@/components/EyebrowBadge";
+import Button from "@/components/Button";
+
+const steps = [
+  {
+    number: "01",
+    title: "Add what you take",
+    description:
+      "List your medications, supplements, vitamins, and herbs. Absovex uses this to identify possible timing and absorption issues.",
+    image: "/steps/1.png",
+    imgClass: "top-[52px] relative",
+  },
+  {
+    number: "02",
+    title: "Add your routine",
+    description:
+      "Tell us about your meals, coffee, sleep, and daily habits. Your routine helps Absovex understand where conflicts may happen.",
+    image: "/steps/2.png",
+    imgClass: "top-[-40px] relative",
+  },
+  {
+    number: "03",
+    title: "We check for conflicts",
+    description:
+      "Absovex reviews your stack for timing, spacing, and food conflicts. We turn the findings into practical recommendations you can follow.",
+    image: "/steps/3.png",
+    imgClass: "top-[60px] relative",
+  },
+  {
+    number: "04",
+    title: "Get your report",
+    description:
+      "Receive a personalized report with suggested changes and a daily guide. See what may be clashing, what to move, and why it matters.",
+    image: "/steps/4.png",
+    imgClass: "top-[40px] relative",
+    cta: true,
+  },
+];
+
+export default function HowItWorks() {
+  return (
+    <section className="flex flex-col items-center gap-20 py-20">
+      {/* Header */}
+      <div className="flex max-w-[700px] flex-col items-center gap-5 text-center">
+        <EyebrowBadge label="How It Works" />
+        <div className="flex flex-col items-center gap-5">
+          <h2>
+            Tell us what you take.
+            <br />
+            <span className="text-[#0f8a8d]">We sort out the rest.</span>
+          </h2>
+          <p className="text-lg font-medium leading-8 text-[#4e655f]">
+            Add your meds, supplements, and daily routine. Absovex checks how
+            they work together and builds a report with the issues it finds, the
+            changes it suggests, and the reasoning behind them.
+          </p>
+        </div>
+      </div>
+
+      {/* Steps */}
+      <div className="flex w-full lg:max-w-3/4 flex-col gap-20">
+        {steps.map((step, i) => {
+          const imageRight = i % 2 === 0;
+
+          const textBlock = (
+            <div
+              className={`flex flex-col gap-5 py-5] flex-1 ${imageRight ? "lg:pr-10" : "lg:pl-10"}`}
+            >
+              <span className="text-2xl font-bold text-[#f2188f]">
+                <span className="relative top-[-2px]">/</span> {step.number}
+              </span>
+              <div className="flex flex-col gap-5">
+                <p className="text-2xl font-bold text-[#0d3127]">
+                  {step.title}
+                </p>
+                <p className="text-lg font-medium leading-8 text-[#4e655f]">
+                  {step.description}
+                </p>
+                {step.cta && (
+                  <div className="mt-2 w-fit">
+                    <Button href="#" showArrow>
+                      Start My Report
+                    </Button>
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+
+          const imageBlock = (
+            <div
+              className="relative flex-1 overflow-hidden rounded-card px-4 lg:px-8 lg:h-[400px] bg-[#fffaf3] bg-center bg-contain max-w-[580px] max-h-[400px] flex-[1_0_400px] lg:flex-1"
+              style={{ backgroundImage: "url('/tile-cream.png')" }}
+            >
+              <Image
+                src={step.image}
+                alt={`Step ${step.number}: ${step.title}`}
+                width={580}
+                height={460}
+                className={`h-auto w-full object-cover ${step.imgClass ?? ""}`}
+              />
+              <div className="pointer-events-none absolute inset-0 shadow-[inset_0px_-20px_64px_-30px_rgba(199,195,181,0.6)]" />
+            </div>
+          );
+
+          return (
+            <div
+              key={step.number}
+              className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between"
+            >
+              {imageRight ? (
+                <>
+                  {textBlock}
+                  {imageBlock}
+                </>
+              ) : (
+                <>
+                  <div className="order-2 flex-1 lg:order-1">{imageBlock}</div>
+                  <div className="order-1 flex-1 lg:order-2">{textBlock}</div>
+                </>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
