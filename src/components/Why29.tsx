@@ -49,7 +49,8 @@ export default function Why29() {
         <Image
           src="/doctor.png"
           alt=""
-          fill
+          width={350}
+          height={525}
           className="pointer-events-none absolute bottom-0 !-right-10 !left-auto hidden !h-[125%] !w-auto lg:block !top-auto opacity-60 xl:opacity-100"
         />
       </div>

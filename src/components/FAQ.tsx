@@ -27,10 +27,10 @@ export default function FAQ() {
   const [open, setOpen] = useState<number>(0);
 
   return (
-    <section className="flex flex-col items-start justify-between gap-10 py-20 lg:flex-row">
+    <section className="flex flex-col items-start justify-between gap-10 py-12 md:py-20 lg:flex-row">
       {/* Left */}
-      <div className="flex flex-col gap-10 flex-1">
-        <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-10 flex-1 md:text-left text-center  items-center lg:items-start">
+        <div className="flex items-center lg:items-start flex-col gap-5">
           <div className="flex">
             <EyebrowBadge label="FAQ" />
           </div>

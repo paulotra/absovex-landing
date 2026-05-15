@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function GreenAbsorb() {
   return (
-    <div className="relative size-[628px] shrink-0 left-6 scale-[1.08]">
+    <div className="relative w-full shrink-0 xl:left-6 scale-[1.08] aspect-square">
       <svg
-        width="628"
-        height="628"
+        width="100%"
+        height="100%"
         viewBox="0 0 628 628"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

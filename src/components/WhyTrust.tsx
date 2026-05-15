@@ -3,16 +3,14 @@ import GreenAbsorb from "./GreenAbsorb";
 
 export default function WhyTrust() {
   return (
-    <div className="flex items-center gap-x-10 py-20">
-      <div className="flex flex-col gap-5 flex-1">
-        <div className="flex">
-          <EyebrowBadge label="Why Trust Us" />
-        </div>
+    <div className="flex items-center gap-x-10 flex-col lg:flex-row py-12 md:py-20">
+      <div className="flex flex-col gap-5 flex-1 items-center text-center lg:items-start lg:text-left">
+        <EyebrowBadge label="Why Trust Us" />
 
         <div className="flex flex-col gap-5">
           <h2>
             Quick to complete.
-            <br />
+            <br className="hidden lg:block" />
             <span className="text-[#0f8a8d]">Private by design.</span>
           </h2>
 
@@ -22,7 +20,7 @@ export default function WhyTrust() {
           </p>
 
           <div className="flex items-start gap-3">
-            <p className="text-lg leading-8 text-[#4e655f]">
+            <p className="text-lg leading-8 text-[#4e655f] text-center lg:text-left">
               <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-[#0f8a8d] text-[12px] font-bold text-white inline-flex mr-2">
                 !
               </span>
@@ -35,7 +33,7 @@ export default function WhyTrust() {
           </div>
         </div>
       </div>
-      <div className="flex-1">
+      <div className="flex-1 w-full md:px-20 lg:px-0">
         <GreenAbsorb></GreenAbsorb>
       </div>
     </div>

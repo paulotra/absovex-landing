@@ -40,7 +40,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="flex flex-col items-center gap-20 py-20">
+    <section className="flex flex-col items-center gap-20 py-20 text-center lg:text-start">
       {/* Header */}
       <div className="flex lg:max-w-[700px] flex-col items-center gap-5 text-center">
         <EyebrowBadge label="How It Works" />
@@ -65,12 +65,12 @@ export default function HowItWorks() {
 
           const textBlock = (
             <div
-              className={`flex flex-col gap-5 py-5] flex-1 ${imageRight ? "lg:pr-10" : "lg:pl-10"}`}
+              className={`flex flex-col gap-5 py-5] flex-1 items-center lg:items-start ${imageRight ? "lg:pr-10" : "lg:pl-10"}`}
             >
               <span className="text-2xl font-bold text-[#f2188f]">
                 <span className="relative top-[-2px]">/</span> {step.number}
               </span>
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col items-center lg:items-start gap-5">
                 <p className="text-2xl font-bold text-[#0d3127]">
                   {step.title}
                 </p>
@@ -107,7 +107,7 @@ export default function HowItWorks() {
           return (
             <div
               key={step.number}
-              className="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between"
+              className="flex flex-col gap-10 lg:flex-row items-center lg:justify-between"
             >
               {imageRight ? (
                 <>
