@@ -42,12 +42,12 @@ export default function HowItWorks() {
   return (
     <section className="flex flex-col items-center gap-20 py-20">
       {/* Header */}
-      <div className="flex max-w-[700px] flex-col items-center gap-5 text-center">
+      <div className="flex lg:max-w-[700px] flex-col items-center gap-5 text-center">
         <EyebrowBadge label="How It Works" />
         <div className="flex flex-col items-center gap-5">
           <h2>
             Tell us what you take.
-            <br />
+            <br className="hidden lg:block" />
             <span className="text-[#0f8a8d]">We sort out the rest.</span>
           </h2>
           <p className="text-lg font-medium leading-8 text-[#4e655f]">
@@ -59,7 +59,7 @@ export default function HowItWorks() {
       </div>
 
       {/* Steps */}
-      <div className="flex w-full lg:max-w-3/4 flex-col gap-20">
+      <div className="flex w-full xl:max-w-3/4 flex-col gap-12 lg:gap-20">
         {steps.map((step, i) => {
           const imageRight = i % 2 === 0;
 
