@@ -24,10 +24,7 @@ export default function Hero() {
       stagger: 0.12,
     });
 
-    gsap.from(".phone", {
-      y: 200,
-      opacity: 0,
-    });
+    gsap.from(".phone", { y: 200, opacity: 0 });
 
     gsap.to(".phone-wrapper", {
       scrollTrigger: {
@@ -93,7 +90,7 @@ export default function Hero() {
   });
 
   return (
-    <section className="hero relative flex flex-col items-center justify-start pt-14 overflow-hidden px-6 text-center bg-[#fffaf3] rounded-2xl lg:min-h-[1000px] pb-20 md:pb-0">
+    <section className="hero relative flex flex-col items-center justify-start pt-14 overflow-hidden px-6 text-center bg-[#fffaf3] rounded-2xl lg:min-h-[1000px] pb-[180px] lg:pb-0">
       {/* Grid lines */}
       <div
         aria-hidden="true"
@@ -145,27 +142,31 @@ export default function Hero() {
         </Button>
       </div>
 
-      <div className="phone-wrapper relative z-10 lg:mt-20 mt-10 lg:top-30 w-full max-w-5xl mx-auto flex flex-col-reverse gap-y-6 lg:block pb-16">
+      <div className="phone-wrapper relative z-10 lg:mt-20 mt-4 lg:top-30 w-full max-w-5xl mx-auto flex flex-col-reverse gap-y-6 lg:block lg:pb-16">
         <div className="relative -z-1 hidden lg:block">
-          <Image
-            src="/hero/desktop.png"
-            alt="paper"
-            width={1067}
-            height={601}
-            className="max-w-[1400px] phone lg:absolute z-20 -top-40 lg:left-1/2 lg:-translate-x-1/2 mx-auto w-full min-w-[640px]"
-            priority
-          />
+          <div className="lg:absolute z-20 -top-40 lg:left-1/2 lg:-translate-x-1/2 w-full">
+            <Image
+              src="/hero/desktop.png"
+              alt="paper"
+              width={1067}
+              height={601}
+              className="phone max-w-[90%] xl:max-w-[1400px] w-full min-w-[640px] mx-auto"
+              priority
+            />
+          </div>
         </div>
 
         <div className="relative lg:-top-24">
-          <Image
-            src="/hero/card.png"
-            alt="paper"
-            width={486}
-            height={461}
-            className="lg:absolute z-10 lg:left-1/2 mx-auto lg:-translate-x-1/2 phone mb-6 lg:mb-0"
-            priority
-          />
+          <div className="lg:absolute lg:left-1/2 lg:-translate-x-1/2 z-10 mb-6 lg:mb-0 flex justify-center">
+            <Image
+              src="/hero/card.png"
+              alt="paper"
+              width={486}
+              height={461}
+              className="phone w-full max-w-[420px] xl:max-w-[486px] -mt-1"
+              priority
+            />
+          </div>
           <div className="relative lg:-top-20 flex flex-col gap-y-4">
             {/* Left card — connector line (curved, flipped to point right→phone) */}
             <LinesLeft
@@ -174,7 +175,7 @@ export default function Hero() {
             />
 
             {/* Left card — timer */}
-            <div className="pop-2 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -left-20 top-20 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+            <div className="pop-2 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -left-10 xl:-left-20 top-20 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
               <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
                 <Image
                   alt="clock"
@@ -196,7 +197,7 @@ export default function Hero() {
             />
 
             {/* Top-right card — private */}
-            <div className="pop-3 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-4 top-0 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+            <div className="pop-3 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute right-4 xl:-right-4 top-0 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
               <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
                 <Image
                   alt="shield"
@@ -218,7 +219,7 @@ export default function Hero() {
             />
 
             {/* Bottom-right card — no account */}
-            <div className="pop-4 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-24 top-43 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
+            <div className="pop-4 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-4 xl:-right-24 top-43 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
               <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
                 <Image
                   alt="bolt"
