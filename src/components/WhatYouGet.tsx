@@ -51,7 +51,7 @@ export default function WhatYouGet() {
       <div className="flex max-w-[700px] flex-col items-center gap-5 text-center">
         <EyebrowBadge label="What You Get" />
         <div className="flex flex-col items-center gap-5">
-          <h2>
+          <h2 className="split-animate">
             One report.
             <br className="hidden lg:block" />
             <span className="text-[#0f8a8d]">Clear answers.</span>
@@ -68,7 +68,7 @@ export default function WhatYouGet() {
         {items.map((item) => (
           <div
             key={item.title}
-            className="flex flex-col items-center gap-4 rounded-card border border-stroke bg-white/60 px-6 py-6 md:py-10 text-center shadow-[0px_14px_24px_0px_rgba(0,34,31,0.04)] backdrop-blur-[8px]"
+            className="card flex flex-col items-center gap-4 rounded-card border border-stroke bg-white/60 px-6 py-6 md:py-10 text-center shadow-[0px_14px_24px_0px_rgba(0,34,31,0.04)] backdrop-blur-[8px]"
           >
             <div className="flex size-20 items-center justify-center rounded-[8px] bg-[#fff7eb] p-[18px] shrink-0">
               <img src={item.icon} alt="" className={item.iconClass} />

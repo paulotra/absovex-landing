@@ -45,12 +45,12 @@ export default function HowItWorks() {
       <div className="flex lg:max-w-[700px] flex-col items-center gap-5 text-center">
         <EyebrowBadge label="How It Works" />
         <div className="flex flex-col items-center gap-5">
-          <h2>
+          <h2 className="split-animate">
             Tell us what you take.
             <br className="hidden lg:block" />
             <span className="text-[#0f8a8d]">We sort out the rest.</span>
           </h2>
-          <p className="text-lg font-medium leading-8 text-[#4e655f]">
+          <p className="text-lg font-medium leading-8 text-[#4e655f] split-animate">
             Add your meds, supplements, and daily routine. Absovex checks how
             they work together and builds a report with the issues it finds, the
             changes it suggests, and the reasoning behind them.
@@ -90,7 +90,7 @@ export default function HowItWorks() {
 
           const imageBlock = (
             <div
-              className="relative flex-1 overflow-hidden rounded-card px-4 lg:px-8 lg:h-[400px] bg-[#fffaf3] bg-center bg-contain max-w-[580px] max-h-[400px] flex-[1_0_400px] lg:flex-1"
+              className="relative flex-1 overflow-hidden rounded-card px-4 lg:px-8 lg:h-[400px] bg-[#fffaf3] bg-center bg-contain max-w-[580px] max-h-[400px] flex-[1_0_400px] lg:flex-1 card"
               style={{ backgroundImage: "url('/tile-cream.png')" }}
             >
               <Image

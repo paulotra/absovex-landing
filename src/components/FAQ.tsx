@@ -35,7 +35,7 @@ export default function FAQ() {
             <EyebrowBadge label="FAQ" />
           </div>
           <div className="flex flex-col gap-5">
-            <h2>
+            <h2 className="split-animate">
               Need help
               <br />
               <span className="text-[#3f9d9a]">understanding the results?</span>
@@ -76,7 +76,7 @@ export default function FAQ() {
       {/* Right — accordion */}
       <div className="flex w-full flex-col gap-3 flex-1">
         {faqs.map((faq, i) => (
-          <div key={i} className="rounded-card border border-stroke px-8 py-6">
+          <div key={i} className="card rounded-card border border-stroke px-8 py-6">
             <button
               className="flex w-full items-start justify-between gap-4 text-left"
               onClick={() => setOpen(open === i ? -1 : i)}

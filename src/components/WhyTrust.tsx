@@ -8,7 +8,7 @@ export default function WhyTrust() {
         <EyebrowBadge label="Why Trust Us" />
 
         <div className="flex flex-col gap-5">
-          <h2>
+          <h2 className="split-animate">
             Quick to complete.
             <br className="hidden lg:block" />
             <span className="text-[#0f8a8d]">Private by design.</span>

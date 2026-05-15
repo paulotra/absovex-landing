@@ -18,7 +18,7 @@ export default function Why29() {
                 <EyebrowBadge label="Why It's Worth $29" />
               </div>
               <div className="flex flex-col gap-5 lg:pr-20 xl:pr-0">
-                <h3>
+                <h3 className="split-animate">
                   A practical first step before your next doctor or pharmacist
                   conversation.
                 </h3>
