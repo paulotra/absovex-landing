@@ -3,10 +3,10 @@ import Button from "@/components/Button";
 
 export default function FinalCTA() {
   return (
-    <section className="relative pt-20">
+    <section className="relative pt-10 lg:pt-20">
       {/* Banner card */}
       <div
-        className="relative overflow-hidden rounded-[24px]"
+        className="relative overflow-hidden xl:rounded-[24px]"
         style={{
           backgroundImage: "url('/footer.png')",
           backgroundSize: "cover",
@@ -14,9 +14,9 @@ export default function FinalCTA() {
         }}
       >
         {/* Content — offset right to make room for paper */}
-        <div className="relative z-10 flex min-h-[420px] items-center justify-end">
-          <div className="flex w-full max-w-[800px] flex-col gap-10 pr-8 lg:pr-14">
-            <div className="flex flex-col gap-2 text-white">
+        <div className="relative z-10 flex lg:min-h-[420px] items-center justify-end py-20 lg:py-0">
+          <div className="flex w-full max-w-none lg:max-w-[620px] xl:max-w-[800px] flex-col gap-10 md:pr-8 lg:pr-14 px-6">
+            <div className="flex flex-col gap-2 text-white text-center lg:text-left">
               <h2 className="text-white">
                 Stop guessing how to take
                 <br className="hidden lg:block" />
@@ -28,7 +28,7 @@ export default function FinalCTA() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-5">
+            <div className="flex flex-wrap flex-col lg:flex-row items-center gap-5">
               <div className="relative">
                 <div className="absolute bottom-[-8px] left-[10px] right-[10px] h-[13px] rounded-[50px] bg-[#0c5254] blur-[6px]" />
                 <Button href="#" showArrow hideShadow>

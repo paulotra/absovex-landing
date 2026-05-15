@@ -24,13 +24,13 @@ export default function Footer() {
   return (
     <div className="container">
       <FinalCTA></FinalCTA>
-      <footer className="py-20">
-        <div className="container flex items-stretch justify-between gap-10">
+      <footer className="py-20 px-6">
+        <div className="container flex lg:flex-row flex-col-reverse items-stretch justify-between gap-10">
           {/* Left: logo + disclaimer + copyright */}
           <div className="flex flex-col justify-between gap-12 flex-1 h-auto">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col items-center text-center md:items-start md:text-left gap-5">
               <Image src="/logo.png" alt="Absovex" width={138} height={32} />
-              <div className="flex items-start gap-3 pr-20">
+              <div className="flex items-start gap-3 md:pr-20">
                 <p className="text-[14px] leading-6 text-[#4e655f]">
                   <span className="mt-1 inline-flex mr-2 size-5 shrink-0 items-center justify-center rounded-full bg-[#0f8a8d] text-[11px] font-bold text-white">
                     !
@@ -44,15 +44,18 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <p className="text-[14px] leading-6 text-[#4e655f]">
+            <p className="text-[14px] leading-6 text-[#4e655f] text-center md:text-left">
               © 2026 ABSOVEX is operated by Extra You, Inc. All rights reserved.
             </p>
           </div>
 
           {/* Right: nav columns */}
-          <div className="flex gap-10 shrink-0 flex-1">
+          <div className="flex md:flex-row flex-col gap-10 shrink-0 flex-1">
             {Object.entries(navLinks).map(([heading, links]) => (
-              <div key={heading} className="flex flex-col gap-5 flex-1">
+              <div
+                key={heading}
+                className="flex flex-col items-center text-center md:text-left md:items-start gap-5 flex-1"
+              >
                 <p className="text-[16px] font-medium leading-8 text-[#0d3127]">
                   {heading}
                 </p>
