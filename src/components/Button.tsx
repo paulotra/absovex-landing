@@ -5,11 +5,13 @@ type ButtonVariant = "default" | "secondary";
 interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: ButtonVariant;
   showArrow?: boolean;
+  hideShadow?: boolean;
 }
 
 export default function Button({
   variant = "default",
   showArrow = false,
+  hideShadow = false,
   className = "",
   children,
   ...props
@@ -29,9 +31,11 @@ export default function Button({
 
   return (
     <div className="relative w-full md:w-auto md:shrink-0">
-      <div
-        className={`absolute bottom-[-8px] left-[10px] opacity-80 right-[10px] h-[13px] rounded-[50px] blur-[6px] ${shadowColor[variant]}`}
-      />
+      {!hideShadow && (
+        <div
+          className={`absolute bottom-[-8px] left-[10px] opacity-80 right-[10px] h-[13px] rounded-[50px] blur-[6px] ${shadowColor[variant]}`}
+        />
+      )}
       <a className={`${base} ${variants[variant]} ${className}`} {...props}>
         {children}
         {showArrow && (

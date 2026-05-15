@@ -59,7 +59,7 @@ body {
 
 .container {
   @apply mx-auto px-0;
-  max-width: 1424px;
+  max-width: 1280px;
 }
 
 #smooth-wrapper {

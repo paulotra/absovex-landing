@@ -1,3 +1,8 @@
+"use client";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import ShaderEffect from "@/components/ShaderEffect";
 import LinesLeft from "@/components/LinesLeft";
 import LinesRightTop from "@/components/LinesRightTop";
@@ -7,6 +12,86 @@ import Button from "@/components/Button";
 import EyebrowBadge from "@/components/EyebrowBadge";
 
 export default function Hero() {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  useGSAP(() => {
+    gsap.to("body", { opacity: 1, duration: 0.4, ease: "power2.out" });
+
+    gsap.from(".scrub", {
+      y: 20,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.12,
+    });
+
+    gsap.from(".phone", {
+      y: 200,
+      opacity: 0,
+    });
+
+    gsap.to(".phone-wrapper", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "center 50%",
+        end: "+=1000",
+        toggleActions: "play none none reverse",
+        scrub: true,
+      },
+      y: 200,
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".phone-wrapper",
+        start: "top 60%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    const drawH = (cls: string, w: number, pos?: string) =>
+      tl.to(
+        `.${cls}`,
+        { attr: { width: w }, duration: 0.8, ease: "power2.inOut" },
+        pos,
+      );
+    const drawV = (cls: string, totalH: number) =>
+      tl.to(`.${cls}`, {
+        attr: { y: 0, height: totalH },
+        duration: 0.25,
+        ease: "power2.inOut",
+      });
+
+    tl.set(".pop-2-line", { opacity: 1 });
+    drawH("clip-ll-h", 232, "-=0.6");
+    drawV("clip-ll-v", 68);
+    tl.from(
+      ".pop-2",
+      { x: 32, opacity: 0, duration: 0.32, ease: "power2.out" },
+      "-=0.1",
+    );
+
+    tl.set(".pop-3-line", { opacity: 1 });
+    drawH("clip-rrt-h", 192, "-=0.6");
+    drawV("clip-rrt-v", 64);
+    tl.from(
+      ".pop-3",
+      { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" },
+      "-=0.1",
+    );
+
+    tl.set(".pop-4-line", { opacity: 1 });
+    tl.to(
+      ".clip-lines-right-bottom",
+      { attr: { width: 181 }, duration: 0.8, ease: "power2.inOut" },
+      "-=0.6",
+    );
+    tl.from(
+      ".pop-4",
+      { x: -32, opacity: 0, duration: 0.32, ease: "power2.out" },
+      "-=0.1",
+    );
+  });
+
   return (
     <section className="hero relative flex flex-col items-center justify-start pt-14 overflow-hidden px-6 text-center bg-[#fffaf3] rounded-2xl lg:min-h-[1000px] pb-20 md:pb-0">
       {/* Grid lines */}
@@ -91,10 +176,12 @@ export default function Hero() {
             {/* Left card — timer */}
             <div className="pop-2 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -left-20 top-20 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
               <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
-                <img
-                  src="https://www.figma.com/api/mcp/asset/0d3ffcb1-4350-4ceb-9367-d4bd93bbef97"
-                  alt=""
-                  className="size-6"
+                <Image
+                  alt="clock"
+                  src="/icons/clock.svg"
+                  width={24}
+                  height={24}
+                  priority
                 />
               </div>
               <p className="w-[219px] text-base leading-6 text-left text-[#0f8a8d]">
@@ -110,11 +197,15 @@ export default function Hero() {
 
             {/* Top-right card — private */}
             <div className="pop-3 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-4 top-0 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
-              <img
-                src="https://www.figma.com/api/mcp/asset/7e60fcc9-290c-471a-8382-398cad35224f"
-                alt=""
-                className="shrink-0 size-[48px]"
-              />
+              <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
+                <Image
+                  alt="shield"
+                  src="/icons/shield.svg"
+                  width={21}
+                  height={24}
+                  priority
+                />
+              </div>
               <p className="whitespace-nowrap text-base leading-6 text-left text-[#0f8a8d]">
                 Private by design.
               </p>
@@ -129,10 +220,13 @@ export default function Hero() {
             {/* Bottom-right card — no account */}
             <div className="pop-4 w-full lg:w-auto max-w-[400px] mx-auto lg:absolute -right-24 top-43 flex items-center gap-4 rounded-card bg-white px-6 py-5 drop-shadow-[0px_14px_12px_rgba(0,34,31,0.04)]">
               <div className="flex shrink-0 items-center justify-center rounded-[8px] bg-[#fff7eb] size-[48px]">
-                <img
-                  src="https://www.figma.com/api/mcp/asset/c67d8f2b-6a8f-4e9d-b852-70a399d090a2"
-                  alt=""
-                  className="size-[30px]"
+                <Image
+                  alt="bolt"
+                  src="/icons/bolt.svg"
+                  width={17}
+                  height={24}
+                  className="w-[17px] h-[24px]"
+                  priority
                 />
               </div>
               <p className="w-[170px] text-base leading-6 text-left text-[#0f8a8d]">

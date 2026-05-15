@@ -2,86 +2,83 @@ import Image from "next/image";
 
 export default function GreenAbsorb() {
   return (
-    <div className="relative size-[628px] shrink-0 left-6 scale-[1.08]">
+    <div className="absolute shrink-0 left-[64%] top-[-24%]">
       <svg
-        width="628"
-        height="628"
-        viewBox="0 0 628 628"
+        width="1092"
+        height="1092"
+        viewBox="0 0 1092 1092"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <mask
-          id="mask0_2086_4163"
+          id="mask0_2159_4771"
           style={{ maskType: "alpha" }}
           maskUnits="userSpaceOnUse"
           x="0"
           y="0"
-          width="628"
-          height="628"
+          width="1092"
+          height="1092"
         >
           <rect
+            opacity="0.5"
             x="0.5"
             y="0.5"
-            width="627"
-            height="627"
-            fill="url(#paint0_radial_2086_4163)"
+            width="1091"
+            height="1091"
+            fill="url(#paint0_radial_2159_4771)"
             stroke="#1E9194"
           />
         </mask>
-        <g mask="url(#mask0_2086_4163)">
-          <g filter="url(#filter0_i_2086_4163)">
+        <g mask="url(#mask0_2159_4771)">
+          <g filter="url(#filter0_i_2159_4771)">
             <circle
-              cx="314"
-              cy="314"
-              r="198.338"
-              fill="url(#paint1_radial_2086_4163)"
+              cx="546"
+              cy="546"
+              r="250.133"
+              fill="url(#paint1_radial_2159_4771)"
             />
           </g>
           <circle
-            cx="314"
-            cy="314"
-            r="237.379"
-            stroke="#0F8A8D"
-            strokeOpacity="0.6"
+            cx="546"
+            cy="546"
+            r="321.1"
+            stroke="#F2188F"
+            strokeOpacity="0.7"
           />
           <circle
-            cx="314"
-            cy="314"
-            r="273.5"
-            stroke="#0F8A8D"
-            strokeOpacity="0.6"
+            cx="546"
+            cy="546"
+            r="392.567"
+            stroke="#F2188F"
+            strokeOpacity="0.7"
           />
-          <circle cx="314" cy="311" r="301.5" stroke="#0F8A8D" />
-          <circle cx="314" cy="314" r="424.51" stroke="#0F8A8D" />
-          <g filter="url(#filter1_d_2086_4163)">
+          <circle cx="546" cy="546" r="464.033" stroke="#F2188F" />
+          <circle cx="546" cy="546" r="535.5" stroke="#F2188F" />
+          <g filter="url(#filter1_d_2159_4771)">
             <circle
-              cx="314"
-              cy="314.001"
-              r="141.67"
-              fill="url(#paint2_linear_2086_4163)"
+              cx="546"
+              cy="546"
+              r="178.667"
+              fill="url(#paint2_linear_2159_4771)"
               fillOpacity="0.9"
               shapeRendering="crispEdges"
             />
           </g>
-          <circle cx="314" cy="314.159" r="85.002" fill="white" />
-          <g opacity="0.6" filter="url(#filter2_i_2086_4163)">
+          <circle cx="546" cy="546.2" r="107.2" fill="white" />
+          <g opacity="0.6" filter="url(#filter2_i_2159_4771)">
             <path
-              d="M316.486 268.819L314.397 268.01L312.325 268.819L274.956 283.28L271.499 284.628L271.283 288.31C270.76 297.275 272.165 311 278 324.402C283.889 337.929 294.388 351.349 312.109 359.002L314.397 359.99L316.684 359.002C334.405 351.349 344.904 337.929 350.793 324.402C356.628 310.982 358.033 297.275 357.511 288.31L357.312 284.628L353.855 283.28L316.486 268.819Z"
-              fill="url(#paint3_linear_2086_4163)"
+              d="M532.648 560.52L577.833 518.905C579.593 517.283 582.321 517.344 584.007 519.043C585.682 520.731 585.734 523.438 584.125 525.189L535.912 577.665C534.186 579.541 531.2 579.478 529.544 577.54L506.748 550.82C505.192 548.996 505.286 546.287 506.965 544.576C508.656 542.851 511.389 542.717 513.24 544.268L532.648 560.52Z"
+              fill="url(#paint3_linear_2159_4771)"
             />
           </g>
-          <path
-            d="M310.638 303.529V307.294H318.362V303.529C318.362 301.453 316.63 299.765 314.5 299.765C312.37 299.765 310.638 301.453 310.638 303.529ZM306.776 307.294V303.529C306.776 299.371 310.234 296 314.5 296C318.766 296 322.224 299.371 322.224 303.529V307.294H326.086V328H302.914V307.294H306.776Z"
-            fill="white"
-          />
         </g>
         <defs>
           <filter
-            id="filter0_i_2086_4163"
-            x="115.662"
-            y="115.662"
-            width="396.676"
-            height="410.676"
+            id="filter0_i_2159_4771"
+            x="295.867"
+            y="295.867"
+            width="500.267"
+            height="514.267"
             filterUnits="userSpaceOnUse"
             colorInterpolationFilters="sRGB"
           >
@@ -103,20 +100,20 @@ export default function GreenAbsorb() {
             <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
             <feColorMatrix
               type="matrix"
-              values="0 0 0 0 0.0588235 0 0 0 0 0.541176 0 0 0 0 0.552941 0 0 0 0.24 0"
+              values="0 0 0 0 0.94902 0 0 0 0 0.0941176 0 0 0 0 0.560784 0 0 0 0.24 0"
             />
             <feBlend
               mode="normal"
               in2="shape"
-              result="effect1_innerShadow_2086_4163"
+              result="effect1_innerShadow_2159_4771"
             />
           </filter>
           <filter
-            id="filter1_d_2086_4163"
-            x="138.33"
-            y="142.331"
-            width="351.34"
-            height="351.34"
+            id="filter1_d_2159_4771"
+            x="333.333"
+            y="337.333"
+            width="425.333"
+            height="425.333"
             filterUnits="userSpaceOnUse"
             colorInterpolationFilters="sRGB"
           >
@@ -132,26 +129,26 @@ export default function GreenAbsorb() {
             <feComposite in2="hardAlpha" operator="out" />
             <feColorMatrix
               type="matrix"
-              values="0 0 0 0 0.0588235 0 0 0 0 0.541176 0 0 0 0 0.552941 0 0 0 0.4 0"
+              values="0 0 0 0 1 0 0 0 0 0.22429 0 0 0 0 0.587686 0 0 0 0.4 0"
             />
             <feBlend
               mode="normal"
               in2="BackgroundImageFix"
-              result="effect1_dropShadow_2086_4163"
+              result="effect1_dropShadow_2159_4771"
             />
             <feBlend
               mode="normal"
               in="SourceGraphic"
-              in2="effect1_dropShadow_2086_4163"
+              in2="effect1_dropShadow_2159_4771"
               result="shape"
             />
           </filter>
           <filter
-            id="filter2_i_2086_4163"
-            x="271.182"
-            y="268.01"
-            width="86.4292"
-            height="95.98"
+            id="filter2_i_2159_4771"
+            x="505.641"
+            y="517.728"
+            width="79.6567"
+            height="65.3062"
             filterUnits="userSpaceOnUse"
             colorInterpolationFilters="sRGB"
           >
@@ -169,70 +166,71 @@ export default function GreenAbsorb() {
               result="hardAlpha"
             />
             <feOffset dy="4" />
-            <feGaussianBlur stdDeviation="8" />
+            <feGaussianBlur stdDeviation="4" />
             <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
             <feColorMatrix
               type="matrix"
-              values="0 0 0 0 0.0455377 0 0 0 0 0.437811 0 0 0 0 0.447378 0 0 0 0.64 0"
+              values="0 0 0 0 0.996451 0 0 0 0 0 0 0 0 0 0.468918 0 0 0 0.6 0"
             />
             <feBlend
               mode="normal"
               in2="shape"
-              result="effect1_innerShadow_2086_4163"
+              result="effect1_innerShadow_2159_4771"
             />
           </filter>
           <radialGradient
-            id="paint0_radial_2086_4163"
+            id="paint0_radial_2159_4771"
             cx="0"
             cy="0"
             r="1"
             gradientUnits="userSpaceOnUse"
-            gradientTransform="translate(314 314) rotate(90) scale(349.081)"
+            gradientTransform="translate(546 546) rotate(90) scale(607)"
           >
             <stop stopColor="#D9D9D9" />
             <stop offset="1" stopColor="#737373" stopOpacity="0" />
           </radialGradient>
           <radialGradient
-            id="paint1_radial_2086_4163"
+            id="paint1_radial_2159_4771"
             cx="0"
             cy="0"
             r="1"
             gradientUnits="userSpaceOnUse"
-            gradientTransform="translate(314 314) rotate(90) scale(416.059)"
+            gradientTransform="translate(546 546) rotate(90) scale(524.711)"
           >
-            <stop stopColor="#C5FEFF" />
+            <stop stopColor="#FDD4E5" />
             <stop offset="1" stopColor="white" />
           </radialGradient>
           <linearGradient
-            id="paint2_linear_2086_4163"
-            x1="314"
-            y1="145.755"
-            x2="314"
-            y2="507"
+            id="paint2_linear_2159_4771"
+            x1="546"
+            y1="367.333"
+            x2="546"
+            y2="724.667"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#9EFDFF" stopOpacity="0" />
-            <stop offset="1" stopColor="#0F8A8D" />
+            <stop stopColor="#FFD0E5" stopOpacity="0" />
+            <stop offset="1" stopColor="#F52085" />
           </linearGradient>
           <linearGradient
-            id="paint3_linear_2086_4163"
-            x1="314.397"
-            y1="304.485"
-            x2="314.397"
-            y2="418.234"
+            id="paint3_linear_2159_4771"
+            x1="545.5"
+            y1="522.136"
+            x2="545.5"
+            y2="597.742"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#1DB9BD" />
+            <stop stopColor="#F2188F" />
             <stop offset="1" stopColor="white" />
           </linearGradient>
         </defs>
       </svg>
+
       <Image
-        src="/green-tablets.png"
-        className="absolute inset-0 w-full h-full"
+        src="/pink-tablets.png"
         alt=""
-        width={628}
-        height={628}
+        width={1092}
+        height={1092}
+        className="absolute inset-0 w-full h-full"
       />
     </div>
   );

@@ -1,4 +1,5 @@
 import EyebrowBadge from "@/components/EyebrowBadge";
+import PinkAbsorb from "@/components/PinkAbsorb";
 
 const items = [
   {
@@ -44,8 +45,9 @@ const items = [
 
 export default function WhatYouGet() {
   return (
-    <section className="flex flex-col items-center gap-10 py-20 lg:max-w-10/12 mx-auto">
+    <section className="flex flex-col items-center gap-10 py-20 lg:max-w-10/12 mx-auto relative">
       {/* Header */}
+      <PinkAbsorb></PinkAbsorb>
       <div className="flex max-w-[700px] flex-col items-center gap-5 text-center">
         <EyebrowBadge label="What You Get" />
         <div className="flex flex-col items-center gap-5">
