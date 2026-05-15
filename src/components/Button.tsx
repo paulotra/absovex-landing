@@ -17,7 +17,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const base =
-    "relative inline-flex items-center justify-center gap-4 rounded-card px-6 xl:px-8 py-3 text-base font-medium transition-opacity hover:opacity-90 w-full md:w-auto";
+    "relative inline-flex items-center justify-center gap-4 rounded-card px-8 py-5 lg:py-3 text-xl lg:text-base font-medium transition-opacity hover:opacity-90 w-full md:w-auto";
 
   const variants: Record<ButtonVariant, string> = {
     default: "bg-[#0f8a8d] text-white",

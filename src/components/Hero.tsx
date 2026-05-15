@@ -133,7 +133,7 @@ export default function Hero() {
         separate, and what to ask your doctor or pharmacist.
       </p>
 
-      <div className="scrub relative z-10 mt-10 flex flex-col items-center gap-6 md:flex-row">
+      <div className="scrub relative z-10 mt-6 lg:mt-10 flex flex-col items-center gap-6 md:flex-row">
         <Button className="w-full md:w-auto" href="#" showArrow>
           Get My $29 Report
         </Button>
@@ -142,7 +142,7 @@ export default function Hero() {
         </Button>
       </div>
 
-      <div className="phone-wrapper relative z-10 lg:mt-20 mt-4 lg:top-30 w-full max-w-5xl mx-auto flex flex-col-reverse gap-y-6 lg:block lg:pb-16">
+      <div className="phone-wrapper relative z-10 lg:mt-20 mt-8 lg:top-30 w-full max-w-5xl mx-auto flex flex-col-reverse gap-y-6 lg:block lg:pb-16">
         <div className="relative -z-1 hidden lg:block">
           <div className="lg:absolute z-20 -top-40 lg:left-1/2 lg:-translate-x-1/2 w-full">
             <Image
