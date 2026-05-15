@@ -11,6 +11,7 @@ import WhatYouGet from "@/components/WhatYouGet";
 import Why29 from "@/components/Why29";
 import Score from "@/components/Score";
 import WhyTrust from "@/components/WhyTrust";
+import FAQ from "@/components/FAQ";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -113,6 +114,7 @@ export default function Home() {
           <Score></Score>
         </div>
         <WhyTrust></WhyTrust>
+        <FAQ></FAQ>
       </div>
     </div>
   );

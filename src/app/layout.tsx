@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import SmoothScroll from "@/components/SmoothScroll";
 import gsap from "gsap";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
             <main className="flex flex-col flex-1 px-6 lg:px-10 top-[88px] relative pb-20">
               {children}
             </main>
+            <Footer />
           </div>
         </div>
       </body>

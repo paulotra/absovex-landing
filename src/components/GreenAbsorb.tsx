@@ -9,7 +9,7 @@ export default function GreenAbsorb() {
         viewBox="0 0 628 628"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="scale-[1.16]"
+        className="scale-[1.1]"
       >
         <mask
           id="mask0_2086_4163"
@@ -230,7 +230,7 @@ export default function GreenAbsorb() {
       </svg>
       <Image
         src="/green-tablets.png"
-        className="!left-[-12px] !top-[23px]"
+        className="!left-[4px] !top-[13px]"
         alt=""
         fill
       />
