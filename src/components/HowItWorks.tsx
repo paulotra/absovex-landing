@@ -40,7 +40,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="flex flex-col items-center gap-20 py-20 text-center lg:text-start">
+    <section className="flex flex-col items-center gap-20 py-12 lg:py-20 text-center lg:text-start">
       {/* Header */}
       <div className="flex lg:max-w-[700px] flex-col items-center gap-5 text-center">
         <EyebrowBadge label="How It Works" />

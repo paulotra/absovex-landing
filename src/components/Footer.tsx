@@ -24,7 +24,7 @@ export default function Footer() {
   return (
     <div className="container">
       <FinalCTA></FinalCTA>
-      <footer className="py-20 px-6">
+      <footer className="lg:py-20 pt-12 pb-10 px-6">
         <div className="container flex lg:flex-row flex-col-reverse items-stretch justify-between gap-10">
           {/* Left: logo + disclaimer + copyright */}
           <div className="flex flex-col justify-between gap-12 flex-1 h-auto">
