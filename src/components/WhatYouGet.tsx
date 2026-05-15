@@ -51,12 +51,12 @@ export default function WhatYouGet() {
       <div className="flex max-w-[700px] flex-col items-center gap-5 text-center">
         <EyebrowBadge label="What You Get" />
         <div className="flex flex-col items-center gap-5">
-          <h2 className="split-animate">
+          <h2 className="word-animate">
             One report.
             <br className="hidden lg:block" />
             <span className="text-[#0f8a8d]">Clear answers.</span>
           </h2>
-          <p className="text-lg font-medium leading-8 text-[#4e655f]">
+          <p className="line-animate text-lg font-medium leading-8 text-[#4e655f]">
             Your report shows where your current routine may be working against
             you, then turns it into a simpler plan you can use right away.
           </p>

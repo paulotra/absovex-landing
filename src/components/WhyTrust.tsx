@@ -8,13 +8,13 @@ export default function WhyTrust() {
         <EyebrowBadge label="Why Trust Us" />
 
         <div className="flex flex-col gap-5">
-          <h2 className="split-animate">
+          <h2 className="word-animate">
             Quick to complete.
             <br className="hidden lg:block" />
             <span className="text-[#0f8a8d]">Private by design.</span>
           </h2>
 
-          <p className="text-lg font-medium leading-8 text-[#4e655f]">
+          <p className="text-lg font-medium leading-8 text-[#4e655f] line-animate">
             Add your routine, get your report, and move on. No long setup. No
             account needed for this first version.
           </p>

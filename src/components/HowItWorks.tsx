@@ -1,3 +1,8 @@
+"use client";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import Image from "next/image";
 import EyebrowBadge from "@/components/EyebrowBadge";
 import Button from "@/components/Button";
@@ -39,18 +44,32 @@ const steps = [
 ];
 
 export default function HowItWorks() {
+  useGSAP(() => {
+    gsap.from(".how-cards .card", {
+      opacity: 0,
+      y: 40,
+      duration: 0.6,
+      ease: "power2.out",
+      stagger: 0.06,
+      scrollTrigger: {
+        trigger: ".how-cards",
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
   return (
     <section className="flex flex-col items-center gap-20 py-12 lg:py-20 text-center lg:text-start">
       {/* Header */}
       <div className="flex lg:max-w-[700px] flex-col items-center gap-5 text-center">
         <EyebrowBadge label="How It Works" />
         <div className="flex flex-col items-center gap-5">
-          <h2 className="split-animate">
+          <h2 className="word-animate">
             Tell us what you take.
             <br className="hidden lg:block" />
             <span className="text-[#0f8a8d]">We sort out the rest.</span>
           </h2>
-          <p className="text-lg font-medium leading-8 text-[#4e655f] split-animate">
+          <p className="line-animate text-lg font-medium leading-8 text-[#4e655f] split-animate">
             Add your meds, supplements, and daily routine. Absovex checks how
             they work together and builds a report with the issues it finds, the
             changes it suggests, and the reasoning behind them.
@@ -71,10 +90,10 @@ export default function HowItWorks() {
                 <span className="relative top-[-2px]">/</span> {step.number}
               </span>
               <div className="flex flex-col items-center lg:items-start gap-5">
-                <p className="text-2xl font-bold text-[#0d3127]">
+                <p className="text-2xl font-bold text-[#0d3127] word-animate">
                   {step.title}
                 </p>
-                <p className="text-lg font-medium leading-8 text-[#4e655f]">
+                <p className="text-lg font-medium leading-8 text-[#4e655f] line-animate">
                   {step.description}
                 </p>
                 {step.cta && (

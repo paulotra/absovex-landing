@@ -35,12 +35,12 @@ export default function FAQ() {
             <EyebrowBadge label="FAQ" />
           </div>
           <div className="flex flex-col gap-5">
-            <h2 className="split-animate">
+            <h2 className="word-animate">
               Need help
               <br />
               <span className="text-[#3f9d9a]">understanding the results?</span>
             </h2>
-            <p className="text-lg font-medium leading-8 text-[#4e655f]">
+            <p className="line-animate text-lg font-medium leading-8 text-[#4e655f]">
               After you unlock your report, you can ask follow-up questions to
               better understand what changed, what matters most, and what to ask
               your doctor.
@@ -76,7 +76,10 @@ export default function FAQ() {
       {/* Right — accordion */}
       <div className="flex w-full flex-col gap-3 flex-1">
         {faqs.map((faq, i) => (
-          <div key={i} className="card rounded-card border border-stroke px-8 py-6">
+          <div
+            key={i}
+            className="card rounded-card border border-stroke px-8 py-6"
+          >
             <button
               className="flex w-full items-start justify-between gap-4 text-left"
               onClick={() => setOpen(open === i ? -1 : i)}
