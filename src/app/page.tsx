@@ -19,7 +19,7 @@ export default function Home() {
         <Statistics></Statistics>
         <HowItWorks></HowItWorks>
         <WhatYouGet></WhatYouGet>
-        <div className="lg:flex gap-x-10 py-20">
+        <div className="lg:flex gap-x-10 py-12 lg:py-20">
           <Why29></Why29>
           <Score></Score>
         </div>

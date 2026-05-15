@@ -2,15 +2,16 @@ import Image from "next/image";
 
 export default function Score() {
   return (
-    <div className="relative flex flex-col items-center justify-between lg:w-1/3 overflow-hidden rounded-card border border-stroke pt-8 px-6 pb-4 max-h-[466px]">
+    <div className="relative flex flex-col items-center justify-between lg:w-1/3 overflow-hidden rounded-card border border-stroke pt-4 xl:pt-8 px-6 pb-4 mt-10 lg:mt-0">
       {/* Top text */}
       <div className="relative z-10 flex flex-col gap-2 text-center">
         <h3 className="text-2xl text-[#0f7e7b]">
           See where your routine stands now, and where it improves.
         </h3>
-        <p className="text-base leading-6 text-[#4e655f]">
+        <p className="text-base leading-6 text-[#4e655f] relative">
           Absovex gives your current routine a score, then shows how it improves
           once timing, spacing, and food conflicts are cleaned up
+          <span className="absolute inset-0 w-full h-full bg-white blur-[4px] -z-10"></span>
         </p>
       </div>
 
@@ -20,7 +21,7 @@ export default function Score() {
         alt=""
         width={302}
         height={627}
-        className="w-full absolute left-1/2 top-46 max-w-[320px] -translate-x-1/2 -z-10"
+        className="w-[calc(100%_-_40px)] absolute left-1/2 top-[100%] -mt-60 xl:-mt-68 max-w-[320px] -translate-x-1/2 -z-10"
       />
 
       {/* Bottom: score card + disclaimer */}

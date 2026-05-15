@@ -11,18 +11,18 @@ export default function Why29() {
           className="rounded-card overflow-hidden px-8 py-10"
           style={{ backgroundImage: "url('/green-cream.png')" }}
         >
-          <div className="flex min-h-[383px] flex-col justify-between gap-10 lg:max-w-[580px] relative z-10">
+          <div className="flex lg:min-h-[383px] flex-col justify-between gap-10 lg:max-w-[580px] relative z-10 items-center text-center lg:text-left lg:items-start">
             {/* Top */}
             <div className="flex flex-col gap-5">
-              <div className="flex">
+              <div className="flex justify-center lg:justify-start">
                 <EyebrowBadge label="Why It's Worth $29" />
               </div>
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-5 lg:pr-20 xl:pr-0">
                 <h3>
                   A practical first step before your next doctor or pharmacist
                   conversation.
                 </h3>
-                <p className="text-base leading-8 text-[#4e655f] pr-20">
+                <p className="text-base leading-8 text-[#4e655f] lg:pr-20">
                   Absovex helps you get organized first. You can spot possible
                   timing issues, understand what may be clashing, and show up
                   with better questions and a clearer picture of your routine.
@@ -31,8 +31,8 @@ export default function Why29() {
             </div>
 
             {/* Bottom */}
-            <div className="flex flex-col gap-5">
-              <div className="w-fit">
+            <div className="flex flex-col gap-5 lg:items-start">
+              <div className="w-fit flex justify-center items-center w-full lg:w-auto">
                 <Button href="#" showArrow>
                   Get My $29 Report
                 </Button>
@@ -50,7 +50,7 @@ export default function Why29() {
           src="/doctor.png"
           alt=""
           fill
-          className="pointer-events-none absolute bottom-0 !-right-10 !left-auto hidden !h-[125%] !w-auto lg:block !top-auto"
+          className="pointer-events-none absolute bottom-0 !-right-10 !left-auto hidden !h-[125%] !w-auto lg:block !top-auto opacity-60 xl:opacity-100"
         />
       </div>
     </section>
