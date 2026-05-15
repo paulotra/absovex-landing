@@ -24,7 +24,7 @@ const items = [
 
 export default function ProofStrip() {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-6 md:gap-8 py-10 md:px-6 border-b border-[#e5e0d5] md:border-b-0">
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-y-4 gap-x-6 md:gap-x-8 py-10 md:px-6 border-b border-[#e5e0d5] md:border-b-0">
       {items.map((item, i) => (
         <React.Fragment key={item.text}>
           <div className="flex items-center gap-8 w-full max-w-[448px] justify-center">
